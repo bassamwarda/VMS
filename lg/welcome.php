@@ -24,6 +24,22 @@ if (isset ($uname) and isset ($u_password ))
                 $_SESSION["u_role_id"]=$row["u_role_id"];
                 $_SESSION["u_director_id"]=$row["u_director_id"];
 
+
+                $sql="SELECT * FROM `contact` WHERE `con_u_id`=  ".$_SESSION["p_id"];
+                $result = mysqli_query($con, $sql);
+                session_start(); 
+                if(mysqli_num_rows($result) > 0)
+                {
+                    $_SESSION["message"]= mysqli_num_rows($result);
+                }
+                else
+                { 
+                    $_SESSION["message"]= 0;
+                }
+
+
+
+
                 echo "<h1>Welcome ".$_SESSION['u_name']."</h1>";
                 echo "<br><a href='logout.php'><input type=button value=logout name=logout></a>";
                 header('Location:../home.php');
@@ -32,6 +48,7 @@ if (isset ($uname) and isset ($u_password ))
         { 
             echo "<script>alert('username or password in correct')</script>";
             echo 'not faund the user ';
+            header('Location:../home.php');
         }
     }
     else
@@ -53,16 +70,6 @@ else
 
 
 <?php
-$sql="SELECT * FROM `contact` WHERE `con_u_id`=  ".$_SESSION["p_id"];
-$result = mysqli_query($con, $sql);
-if(mysqli_num_rows($result) > 0)
-{
-    session_start(); 
-    $_SESSION["message"]= mysqli_num_rows($result);
-}
-else
-{ 
-    $_SESSION["message"]= 0;
-}
+
 
 ?>

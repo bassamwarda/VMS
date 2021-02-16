@@ -193,7 +193,7 @@
                                                                     <div class="container">
                                                                         <center>
                                                                         <button type="submit" name="user_login" class="btn btn-lg btn-success">دخول</button>
-                                                                        <button type="submit" onclick="document.getElementById('id01').style.display='none'"class="btn btn-lg btn-danger">خروج</button>
+                                                                        <button type="button" onclick="document.getElementById('id01').style.display='none'"class="btn btn-lg btn-danger">خروج</button>
                                                                         </center>
                                                                     </div>
                                                                     <h6></h6>
