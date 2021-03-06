@@ -8,7 +8,6 @@
 </head><body>
 <?php
  require '../connection.php';
-print_r($_POST);
 if(isset($_POST['work_id']) && isset($_POST['work_person_id']) && isset($_POST['work_vaccin_name']) && isset($_POST['work_doctor']))
 {
     if ($_POST['work_next_date'] > date("Y-m-d"))
@@ -49,17 +48,16 @@ if(isset($_POST['work_id']) && isset($_POST['work_person_id']) && isset($_POST['
  
              }
      }else{
-      echo "<br> يرجى التأكد من التاريخ القادم.<br>";   
+      echo "<h3 class='alert alert-danger'><br> يرجى التأكد من التاريخ القادم.</h3><br>";   
      }
  }
  else
  { 
-     echo '<!--<br> input is not set';
+     echo '<h3 class="alert alert-danger"><br> input is not set</h3>';
  } 
  
  ?>
 <br>
-<a href='../work.php'>Back</a>
 <p class="btn btn-info btn-lg active"><a href='../work.php' style="padding:50px ;color:black;">رجوع</a></p>
 </body>
 </html>

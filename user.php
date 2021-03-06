@@ -164,8 +164,9 @@
             $sql = "SELECT user.`p_id`,`p_f_name`,`p_m_name`,`p_l_name` FROM `person`,`user` WHERE user.`u_director_id`=".$_SESSION['u_director_id']." && person.p_id=user.p_id  ORDER BY p_id DESC;";
             $result = mysqli_query($con, $sql);
             if($result)
-            {                                               
-                echo '<div id="d1">'  ;
+            {        
+                                                     
+                echo '<div id="d1" >'  ;
                 echo '</div>';   
                 echo '<table class="table table-hover pre-scrollable " id="tb" > ';
                 echo '<thead>'.'<tr><th>'.'التسلسل' .'</th>'.'<th>'.'الأسم'.'</th>'.'<th>'.'اسم الأب'.'</th>'.'<th>'.'اسم الجد'.'</th>'.'</tr>'.'</thead>';

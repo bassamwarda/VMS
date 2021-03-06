@@ -3,7 +3,7 @@
           
           if (isset($_POST['searchtext'])) {
             if ($_POST['searchtext']=="") {
-              echo "no result...";
+              echo "<br><h3 class='alert alert-danger'>no result...<h3>";
             }
             else{
             $searchtext =$_POST['searchtext'];
@@ -15,7 +15,7 @@
           $result = mysqli_query($con, $sql);
           if($result)
           {                                             
-            echo '<table class="table table-hover  pre-scrollable " id="tb2" name="tb2"> ';
+            echo '<table class="table table-hover  pre-scrollable table-responsive" id="tb2" name="tb2"> ';
               
               echo '<thead>'.'<tr><th>التسلسل</th>'.'<th>'.'تسلسل الشخص' .'</th>'.'<th>'.'الأسم'.'</th>'.'<th>'.'اسم الأب'.'</th>'.'<th>'.'اسم الجد'.'</th>'.'<th>تاريخ اليوم</th>'.'<th>تاريخ القادم</th>'.'<th>الملاحظات</th>'.'<th>اسم الطبيب</th>'.'<th>المستخدم</th>'.'<th>الدائرة</th>'.'<th>رقم التلقيح</th>'.'<th>اسم التلقيح</th>'.'<th>الجرعة</th>'.'</tr>'.'</thead>';
               $iii=0;
@@ -68,8 +68,7 @@ echo ' <script>   //this script is for set the selected row in input
                 document.getElementById("work_next_date").value=(this.cells[6].innerHTML).trim();
                 document.getElementById("work_note").value=this.cells[7].innerHTML;
                 document.getElementById("work_doctor").value=this.cells[8].innerHTML;            
-                document.getElementById("work_vaccin_name").value=(this.cells[11].innerHTML).trim();
-               
+                document.getElementById("work_vaccin_name").value=Number((this.cells[11].innerHTML).trim());
               };
             }
           }  

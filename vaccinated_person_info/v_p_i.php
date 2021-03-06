@@ -28,11 +28,12 @@
   $word=trim($_POST['searchtext']);
     $sql="SELECT `p_f_name`, `p_m_name`, `p_l_name` FROM `person` where p_id like '%$word'";	
     $result = mysqli_query($con, $sql);   
-	 if($result)
+    $num=mysqli_num_rows($result);
+	 if($num > 0)
 	 {
      $row = mysqli_fetch_assoc($result);
-	 echo '<div id="d1" name="d1" dir="rtl"> <h3>اسم الشخص:  '.$row["p_f_name"].' '.$row["p_m_name"].' '.$row["p_l_name"].'<h3></div>';
-	 }
+	    echo '<div id="d1" name="d1" dir="rtl"> <h3>اسم الشخص:  '.$row["p_f_name"].' '.$row["p_m_name"].' '.$row["p_l_name"].'<h3></div>';
+	 
 	 
 	 
 	 //===============================================================
@@ -78,6 +79,10 @@
             echo'</tbody>
           </table>';	 
    }
+  }
+  else{
+    echo '<div id="d1" name="d1" dir="rtl"> <h3>اسم الشخص:  لا يوجد<h3></div>';
+  }
   }
   //mysqli_close($con);
   //header("location: vaccinated_person_info")

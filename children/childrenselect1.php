@@ -8,7 +8,7 @@
           $result = mysqli_query($con, $sql);
           if($result)
           {                                             
-            echo '<table class="table table-hover  pre-scrollable " id="tb2" name="tb2"> ';
+            echo '<table class="table table-hover  pre-scrollable table-responsive " id="tb2" name="tb2"> ';
               
               echo '<thead>'.'<tr><th>'.'التسلسل' .'</th>'.'<th>'.'الأسم'.'</th>'.'<th>'.'اسم الأب'.'</th>'.
               '<th>'.'اسم الجد'.'</th>'.'<th>'.'اسم الام'.'</th>'.'<th>'.'اسم اب الأم'.'</th>'.'<th>'.'اسم الجد الأم'.'</th>'.

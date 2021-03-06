@@ -42,14 +42,14 @@ if(isset($_POST['ch_f_name']) && isset($_POST['ch_m_name']) && isset($_POST['ch_
                     $sql2 = "insert into person_vaccination values ($pid,'$pv_nationality','$pv_m_f_name','$pv_m_m_name','$pv_m_l_name',CURRENT_TIMESTAMP,'$pv_user_id','$pv_direct_id')";
                     if($con->multi_query($sql2))
                       {  echo "Record Saved";
-                        //  header('location: ../children.php');
+                          header('location: ../children.php');
                       }
                       else{
                         $sql = "DELETE FROM `person` WHERE p_id='$pid'";
                         $result2 = mysqli_query($con, $sql);
                         if($result2)
                         {echo "Record Saved2";
-                            // header('location: ../children.php');
+                             header('location: ../children.php');
                         }else
                         {
                             ?>

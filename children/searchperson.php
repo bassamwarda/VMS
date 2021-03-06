@@ -13,7 +13,7 @@
           $result = mysqli_query($con, $sql);
           if($result)
           {                                             
-            echo '<table class="table table-hover pre-scrollable " id="tb2" name="tb2"> ';
+            echo '<table class="table table-hover pre-scrollable table-responsive" id="tb2" name="tb2"> ';
               
               echo '<thead>'.'<tr><th>'.'تسلسل' .'</th>'.'<th>'.'أسم'.'</th>'.'<th>'.'أسم الأب'.'</th>'.
               '<th>'.'أسم الجد'.'</th>'.'<th>'.'أسم الام'.'</th>'.'<th>'.'أسم اب الأم'.'</th>'.'<th>'.'أسم جد الأم'.'</th>'.

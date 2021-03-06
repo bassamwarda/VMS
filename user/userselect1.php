@@ -1,6 +1,7 @@
           <?php    
           require '../connection.php';
           
+            
           if (isset($_POST['tid'])) {
             $tid2 =$_POST['tid'];
             $sql = "SELECT * FROM `person`,`user` WHERE person.p_id=$tid2 && user.p_id=$tid2";
@@ -8,7 +9,7 @@
           $result = mysqli_query($con, $sql);
           if($result)
           {                                             
-            echo '<table class="table table-hover pre-scrollable " id="tb2" name="tb2"> ';
+            echo '<table class="table table-hover pre-scrollable table-responsive" id="tb2" name="tb2"> ';
               
               echo '<thead>'.'<tr><th>'.'التسلسل' .'</th>'.'<th>'.'الأسم'.'</th>'.'<th>'.'اسم الأب'.'</th>'.
               '<th>'.'اسم الجد'.'</th>'.'<th>'.'نوع الوظيفة'.'</th>'.'<th>'.'اسم المستخدم'.'</th>'.'<th>'.'كلمة السر'.'</th>'.
@@ -82,5 +83,5 @@ echo ' <script>   //this script is for set the selected row in input
           }  
           setrowininput1();  
          
-</script>   ';
+</script>';
 ?>

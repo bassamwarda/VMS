@@ -22,19 +22,19 @@ for($i=0; $i < count($keys); ++$i) {
 echo "<br>";
 //print_r($_GET);*/
 //echo $_POST['vacc_no'];  
-
+require "../connection.php";
 if (isset ($_POST['vacc_age']) and isset ($_POST['vacc_name'] ) and isset ($_POST['vacc_no']) and isset ($_POST['vacc_user'] ))
 {
     if ( (int)$_POST['vacc_no'] > 0 && (int)$_POST['vacc_age'] >= 0 && (int)$_POST['vacc_user'] > 0)
     {  
       
-      $con=mysqli_connect('localhost','root','','vms_db');
-        if(mysqli_connect_errno())
-        {
-             echo "failed to connect".mysqli_connect_error();
-            exit();
-        }else
-        {
+     // $con=mysqli_connect('localhost','root','','vms_db');
+        // if(mysqli_connect_errno())
+        // {
+        //      echo "failed to connect".mysqli_connect_error();
+        //     exit();
+        // }else
+         {
             $v_id=$_POST['vacc_id'];
             $v_right_age=$_POST['vacc_age'];
             $v_vaccination_name=$_POST['vacc_name'];

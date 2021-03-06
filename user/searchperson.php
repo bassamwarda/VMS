@@ -16,7 +16,7 @@
             
           if($result)
           {                                             
-            echo '<table class="table table-hover  pre-scrollable " id="tb2" name="tb2"> ';
+            echo '<table class="table table-hover  pre-scrollable table-responsive " id="tb2" name="tb2"> ';
               
               echo '<thead>'.'<tr><th>'.'التسلسل' .'</th>'.'<th>'.'الأسم'.'</th>'.'<th>'.'اسم الأب'.'</th>'.
               '<th>'.'اسم الجد'.'</th>'.'<th>'.'نوع الوظيفة'.'</th>'.'<th>'.'اسم المستخدم'.'</th>'.'<th>'.'كلمة السر'.'</th>'.

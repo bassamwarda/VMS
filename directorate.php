@@ -64,16 +64,15 @@
                <div class="row">
                             
                     <div class="col-sm-1" >
-                        <button class="btn btn-default" onclick="javascript:sendserch();" id="btn_search" type="button"> بحث </button>
-                
+                       
                     </div>
                     
                     <div class="col-sm-10"style="padding-right:5%">
-                        <input type="text" class="form-control"  id="myInput"style=" background-color: rgb(255, 255, 204);"  placeholder="بحث...">
-
+             
+                        <input class="form-control" id="myInput" type="text" placeholder="بحث...">
                     </div>
                 </div>
-
+<br>
                
            
                 <?php 

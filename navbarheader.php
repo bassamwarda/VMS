@@ -78,14 +78,21 @@
                                         <div class="main-menu f-right d-none d-lg-block">
                                             <nav> 
                                                 <ul id="navigation">                                                      
-                                                    <li class="active"><a class="fs-5" href="home.php">الصفحة الرئيسية</a></li>
+                                                <li class="active"><a class="fs-5" href="home.php">الصفحة الرئيسية</a></li>
+                                                    
+                                                <li><a href="#"class="fs-5">التقارير</a>
+                                                                <ul class="submenu">
+                                                                    <li id="chilren"><a href="report.php" class="fs-5"> متلقح</a></li>  
+                                                                </ul>
+                                                            </li>
+
                                                     <!-- =============================================================== -->
                                                     <?php
                                                             if(isset(  $_SESSION["u_name"]))
                                                             {
                                                             if ($_SESSION['u_role_id']==1) {
                                                                 echo '
-                                                                <li id="insertdata" id="insertdata"><a href="#"class="fs-5"class="fs-5">إدخال</a>
+                                                                <li id="insertdata"><a href="#"class="fs-5">إدخال</a>
                                                                 <ul class="submenu">
                                                                     <li id="chilren"><a href="children.php" class="fs-5"> متلقح</a></li> 
                                                                     <li id="users"><a href="user.php" class="fs-5"> مستخدم</a></li> 
@@ -98,7 +105,7 @@
                                                             elseif ($_SESSION['u_role_id']==2) {
 
                                                                 echo '
-                                                                <li id="insertdata" id="insertdata"><a href="#"class="fs-5"class="fs-5">إدخال</a>
+                                                                <li id="insertdata"><a href="#"class="fs-5">إدخال</a>
                                                                 <ul class="submenu">
                                                                     <li id="users"><a href="user.php" class="fs-5"> مستخدم</a></li> 
                                                                     <li id="vaccintype"><a href="Vaccin.php" class="fs-5">انواع التلقيحات</a></li> 
@@ -109,7 +116,7 @@
                                                             elseif ($_SESSION['u_role_id']==3) {
                                                                 
                                                                 echo '
-                                                                <li id="insertdata" id="insertdata"><a href="#"class="fs-5"class="fs-5">إدخال</a>
+                                                                <li id="insertdata"><a href="#"class="fs-5">إدخال</a>
                                                                 <ul class="submenu">
                                                                     <li id="chilren"><a href="children.php" class="fs-5"> متلقح</a></li> 
                                                                     <li id="work"><a href="work.php" class="fs-5">التسجيل</a></li> 
@@ -147,11 +154,11 @@
                                                             if(isset(  $_SESSION["u_name"]))
                                                             {
                                                                 echo '<div class="btn-group"dir="ltr">
-                                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <button class="btn btn-secondary  btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                                 تسجيل الخروج </button>
                                                                 <ul class="dropdown-menu">
                                                                 <li>
-                                                                <a href="messages.php"><button type="button" class="btn btn-primary">
+                                                                <a href="messages.php"><button type="button" class="btn btn-primary fs-5">
                                                                     <span class="badge bg-secondary">'.$_SESSION["message"].'</span> الرسائل
                                                                     </button></a>
                                                                 </li>
