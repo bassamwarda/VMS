@@ -5,6 +5,9 @@
         <?php
             include "navbarheader.php";
         ?>      
+         <script>
+            document.getElementById("lihome").classList.add("active") ;            
+        </script>
 <main>
     <br>
 

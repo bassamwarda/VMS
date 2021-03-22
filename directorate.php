@@ -11,6 +11,9 @@
         <?php
             include "navbarheader.php";
         ?> 
+        <script>
+            document.getElementById("insertdata").classList.add("active") ;            
+        </script>
     <main>
     <br>
 

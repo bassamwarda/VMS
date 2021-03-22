@@ -8,6 +8,9 @@ require "connection.php";
     <?php
         include "navbarheader.php";
     ?> 
+    <script>
+        document.getElementById("licontact").classList.add("active") ;            
+    </script>
     <main>
     <br>
 

@@ -78,9 +78,9 @@
                                         <div class="main-menu f-right d-none d-lg-block">
                                             <nav> 
                                                 <ul id="navigation">                                                      
-                                                <li class="active"><a class="fs-5" href="home.php">الصفحة الرئيسية</a></li>
+                                                <li class="" id="lihome"><a class="fs-5" href="home.php">الصفحة الرئيسية</a></li>
                                                     
-                                                <li><a href="#"class="fs-5">التقارير</a>
+                                                <li id="lireport" ><a href="#"class="fs-5">التقارير</a>
                                                                 <ul class="submenu">
                                                                     <li id="chilren"><a href="report.php" class="fs-5"> متلقح</a></li>  
                                                                 </ul>
@@ -140,14 +140,14 @@
                                                     </li> -->*/
                                                         ?>
                                                     <!-- ============================================================== -->
-                                                    <li><a href="#"class="fs-5">عرض</a>
+                                                    <li id="liview"><a href="#"class="fs-5">عرض</a>
                                                         <ul class="submenu">
                                                             <li><a class="fs-5" href="information.php">معلومات عامة</a></li>
                                                             <li><a class="fs-5" href="vaccinated_person_info.php">معلومات المتلقحين</a></li>
                                                         </ul>
                                                     </li> 
-                                                    <li><a class="fs-5" href="contact.php">الأتصال بنا</a></li>
-                                                    <li><a class="fs-5" href="about.php">حول</a></li>
+                                                    <li id="licontact"><a class="fs-5" href="contact.php">الأتصال بنا</a></li>
+                                                    <li id="liabout"><a class="fs-5" href="about.php">حول</a></li>
                                                     <li>
 
                                                         <?php 

@@ -6,6 +6,9 @@
             include "navbarheader.php";
             include "connection.php";
         ?> 
+        <script>
+            document.getElementById("lireport").classList.add("active") ;            
+        </script>
     <main>
     <br>
 
