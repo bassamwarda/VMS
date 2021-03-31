@@ -80,11 +80,7 @@
                                                 <ul id="navigation">                                                      
                                                 <li class="" id="lihome"><a class="fs-5" href="home.php">الصفحة الرئيسية</a></li>
                                                     
-                                                <li id="lireport" ><a href="#"class="fs-5">التقارير</a>
-                                                                <ul class="submenu">
-                                                                    <li id="chilren"><a href="report.php" class="fs-5"> متلقح</a></li>  
-                                                                </ul>
-                                                            </li>
+                                                
 
                                                     <!-- =============================================================== -->
                                                     <?php
@@ -100,7 +96,15 @@
                                                                     <li id="directorate"><a href="directorate.php" class="fs-5">الدوائر</a></li>
                                                                     <li id="work"><a href="work.php" class="fs-5">التسجيل</a></li> 
                                                                 </ul>
-                                                            </li> ';
+                                                            </li>
+                                                            <li id="lireport" ><a href="#"class="fs-5">التقارير</a>
+                                                                <ul class="submenu">
+                                                                    <li id="chilren"><a href="report.php" class="fs-5"> متلقح</a></li>  
+                                                                </ul>
+                                                            </li>
+                                                            
+                                                            ';
+
                                                              }
                                                             elseif ($_SESSION['u_role_id']==2) {
 
