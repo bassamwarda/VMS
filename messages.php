@@ -36,16 +36,7 @@ include "connection.php"
                                 echo '<td>'. $row["con_message"].'  '.'</td>';
                                 echo '<td><input type="submit" name="delete" value="حذف"class=" btn-danger"id="'.$row["con_id"].'">'.'</td>';
                                 echo '</tr>';
-                                
-                                
-                                
-                                /*$_SESSION["con_id"]=  $row["con_id"];
-                                $_SESSION["con_ch_id"]=$row["con_ch_id"];
-                                $_SESSION["con_message"]=$row["con_message"];
-                                  $_SESSION["con_u_id"]=$row["con_u_id"];
-                                  $_SESSION["con_isread"]=$row["con_isread"];*/
                               }
-                              
                               echo '</table>';
                           }
                           else
@@ -100,8 +91,9 @@ include "connection.php"
     ?>      
 
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
     <!-- JS here -->
     <!-- All JS Custom Plugins Link Here here -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>

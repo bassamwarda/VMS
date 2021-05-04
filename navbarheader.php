@@ -3,7 +3,8 @@
     ?>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
         <link rel="manifest" href="site.webmanifest">
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -63,16 +64,16 @@
                         <div class="container-fluid">
                             <div  class="row align-items-center" >
                                 <!-- Logo -->
-                                <div class="col-xl-2 col-lg-2 col-md-2">
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                     <!-- Mobile Menu -->
-                                    <div class="col-xl-10 col-lg-10 col-md-10">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
                                         <div class="mobile_menu d-block d-lg-none"style="float:left "></div>
                                     </div>
                                     <div class="logo">
                                         <a href="home.php"><img src="assets/img/logo/logo.png" alt=""></a>
                                     </div>
                                 </div>
-                                <div class="col-xl-10 col-lg-10 col-md-10">
+                                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
                                 <div class="menu-main d-flex align-items-start justify-content-end">
                                     <!-- Main-menu -->
                                         <div class="main-menu f-right d-none d-lg-block">
@@ -146,7 +147,6 @@
                                                     <!-- ============================================================== -->
                                                     <li id="liview"><a href="#"class="fs-5">عرض</a>
                                                         <ul class="submenu">
-                                                            <li><a class="fs-5" href="information.php">معلومات عامة</a></li>
                                                             <li><a class="fs-5" href="vaccinated_person_info.php">معلومات المتلقحين</a></li>
                                                         </ul>
                                                     </li> 
@@ -159,17 +159,19 @@
                                                             {
                                                                 echo '<div class="btn-group"dir="ltr">
                                                                 <button class="btn btn-secondary  btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                تسجيل الخروج </button>
+                                                                '.$_SESSION["u_name"].' </button>
                                                                 <ul class="dropdown-menu">
                                                                 <li>
-                                                                <a href="messages.php"><button type="button" class="btn btn-primary fs-5">
-                                                                    <span class="badge bg-secondary">'.$_SESSION["message"].'</span> الرسائل
-                                                                    </button></a>
+                                                                    <a href="messages.php">
+                                                                        <button type="button" class="btn btn-primary fs-5">
+                                                                            <span class="badge bg-secondary">'.$_SESSION["message"].'</span> الرسائل
+                                                                        </button>
+                                                                        
+                                                                    </a>
                                                                 </li>
-                                                                    <li><p class="container"><i>Dear '.$_SESSION["u_name"].'.</i><br> are you sury you went to log out ?</p></li>
+                                                                    <li><p class="container"><i>'.$_SESSION["u_name"].'عزيزي المشترك </i><br> هل تريد تسجيل الخروج ?</p></li>
                                                                     <li>
-                                                                      <a href="lg/logout.php"><button type="button" value=logout name=logout class="btn btn-success btn-circle btn-xl">تسجيل الخروج <br></button></a>
-                                                            
+                                                                      <a href="lg/logout.php"><button type="button" value=logout name=logout class="btn btn-success btn-sm">تسجيل الخروج <br></button></a>                                                            
                                                                     </li>
                                                                 </ul>
                                                                 </div>
@@ -177,8 +179,8 @@
                                                             }
                                                             else
                                                             {
-                                                               echo" <button type='button' onclick="." document.getElementById('id01').style.display='block'"." class='btn btn-success btn-circle btn-xl'>";
-                                                               echo "تسجيل الدخول</button>";
+                                                               echo" <button type='button' onclick="." document.getElementById('id01').style.display='block'"." class='btn btn-secondary  fs-5'>";
+                                                               echo "دخول</button>";
                                                             }
                                                             
                                                         ?>

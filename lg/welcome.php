@@ -46,14 +46,15 @@ if (isset ($uname) and isset ($u_password ))
         }
         else
         { 
-            echo "<script>alert('username or password in correct')</script>";
+            echo "<script>alert('username or password incorrect')</script>";
             echo 'not faund the user ';
             header('Location:../home.php');
         }
     }
     else
     {
-        echo "<br>pleace insert the userid and password again.<br>";   
+        echo "<script>alert('username or password incorrect')</script>";
+        header('Location:../home.php');  
     }
 }
 else

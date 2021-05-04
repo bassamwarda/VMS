@@ -207,8 +207,13 @@
         include "footer.php";
     ?>      
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script> -->
+
+
     <!-- JS here -->
     <!-- All JS Custom Plugins Link Here here -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -318,20 +323,29 @@
                 document.getElementById("work_dir_name").value=this.cells[10].innerHTML;            
                 //document.getElementById("work_vaccin_name").options =117;//Number(this.cells[11].innerHTML);
                 //========================================================
-                
+                document.getElementById("work_vaccin_name").selectedIndex = "1";
+            // var textToFind = 'v1';
 
-                var dd = document.getElementById('work_vaccin_name');
-                for (var i = 0; i < dd.options.length; i++) {
-                    if (dd.options[i].value == Number(this.cells[11].innerHTML)) {
+            //   var dd = document.getElementById('work_vaccin_name');
+            //   for (var i = 0; i < dd.options.length; i++) {
+            //       if (dd.options[i].text === textToFind) {
+            //           dd.selectedIndex = i;
+            //           alert(i);
+            //           break;
+            //       }
+            //   }
+                // var dd = document.getElementById('work_vaccin_name');
+                // for (var i = 0; i < dd.options.length; i++) {
+                //     if (dd.options[i].value == Number(this.cells[11].innerHTML)) {
                       
-                        dd.selectedIndex = i;
-                        document.getElementById("work_vaccin_name").selectedIndex =i.toString();
-                        alert(i);
-                        break;
-                    }
-                }
+                //         dd.selectedIndex = i;
+                //         document.getElementById("work_vaccin_name").selectedIndex =i.toString();
+                //         alert(i);
+                //         break;
+                //     }
+                // }
                 
-                // setrowininput1();
+                 setrowininput();
         };
     }
   }                

@@ -145,8 +145,8 @@
 
 .mobile_menu {
 	position: absolute;
-	right: 10px;
-	width: 96%;
+	right: 0px;
+	width: 100%;
 	z-index: 99;
 }
 .slicknav_menu .slicknav_menutxt {

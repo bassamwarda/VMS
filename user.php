@@ -104,7 +104,7 @@
                                 <label for="floatingInput" dir="rtl"   >فرع</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="number"  class="form-control"id="user_phone"min="0" required name="user_phone" dir="rtl" placeholder="123-4567(750)">
+                                <input type="text"  class="form-control"id="user_phone"min="0" required name="user_phone" dir="rtl" placeholder="123-4567(750)">
                                 <label for="floatingInput" dir="rtl" > 07500000000  الهاتف</label>
                             </div>
                             <div class="form-floating mb-3">
@@ -213,8 +213,9 @@
     ?>      
 
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
     <!-- JS here -->
     <!-- All JS Custom Plugins Link Here here -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -304,8 +305,6 @@
 //this function is for empty all input
   function newrow()
   {    
-    
-      
       document.getElementById("add").disabled=false;
       document.getElementById("user_id").value=<?php echo selectmaxid("p_id","user");?>;
       document.getElementById("user_f_name").value=null;
