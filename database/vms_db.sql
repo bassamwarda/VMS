@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 29, 2020 at 11:34 AM
--- Server version: 10.4.16-MariaDB
--- PHP Version: 7.4.12
+-- Generation Time: May 09, 2021 at 11:24 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -39,7 +40,8 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`con_id`, `con_ch_id`, `con_message`, `con_u_id`) VALUES
-(1, 1, 'lk', 1);
+(10, 1, 'hello dear please change my name because it is not true my name is bassam butros warda ', 1),
+(11, 1, 'سلاڤ بەرێز ناڤێ زاروکی نە یێ درستە ناڤێ وی (  )', 1);
 
 -- --------------------------------------------------------
 
@@ -59,7 +61,8 @@ CREATE TABLE `directoration` (
 --
 
 INSERT INTO `directoration` (`dir_id`, `dir_sector_name`, `dir_directorate_name`, `dir_center_name`) VALUES
-(1, 'duhok  ', 'zakho  ', 'saaid piran  ');
+(1, 'duhok    ', 'zakho    ', 'saaid piran    '),
+(3, 'duhok', 'zakho', 'bersivey');
 
 -- --------------------------------------------------------
 
@@ -71,60 +74,6 @@ CREATE TABLE `dosing` (
   `d_v_id` int(11) NOT NULL,
   `d_name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `link_roles_menus`
---
-
-CREATE TABLE `link_roles_menus` (
-  `m_id` int(11) NOT NULL,
-  `m_role_id` int(11) NOT NULL,
-  `m_meue_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `link_roles_menus`
---
-
-INSERT INTO `link_roles_menus` (`m_id`, `m_role_id`, `m_meue_id`) VALUES
-(1, 1, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `menus`
---
-
-CREATE TABLE `menus` (
-  `m_id` int(11) NOT NULL,
-  `m_name` varchar(40) NOT NULL,
-  `m_create_user` tinyint(1) NOT NULL,
-  `m_delete_user` tinyint(1) NOT NULL,
-  `m_update_user` tinyint(1) NOT NULL,
-  `m_view_user_by_direction` tinyint(1) NOT NULL,
-  `m_view_all_user` tinyint(1) NOT NULL,
-  `m_give_permssion_user` tinyint(1) NOT NULL,
-  `m_add_direction` tinyint(1) NOT NULL,
-  `m_delete_direction` tinyint(1) NOT NULL,
-  `m_update_direction` tinyint(1) NOT NULL,
-  `m_view_direction` tinyint(1) NOT NULL,
-  `m_add_person` tinyint(1) NOT NULL,
-  `m_delete_person` tinyint(1) NOT NULL,
-  `m_update_person` tinyint(1) NOT NULL,
-  `m_add_vaccin` tinyint(1) NOT NULL,
-  `m_delete_vaccin` tinyint(1) NOT NULL,
-  `m_update_vaccin` tinyint(1) NOT NULL,
-  `m_view_vaccin` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `menus`
---
-
-INSERT INTO `menus` (`m_id`, `m_name`, `m_create_user`, `m_delete_user`, `m_update_user`, `m_view_user_by_direction`, `m_view_all_user`, `m_give_permssion_user`, `m_add_direction`, `m_delete_direction`, `m_update_direction`, `m_view_direction`, `m_add_person`, `m_delete_person`, `m_update_person`, `m_add_vaccin`, `m_delete_vaccin`, `m_update_vaccin`, `m_view_vaccin`) VALUES
-(1, 'bb', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -150,9 +99,15 @@ CREATE TABLE `person` (
 --
 
 INSERT INTO `person` (`p_id`, `p_f_name`, `p_m_name`, `p_l_name`, `p_birthday`, `p_gender`, `p_phone`, `p_city`, `p_region`, `p_street`) VALUES
-(1, 'bassam', 'putros', 'warda', '1993-03-07', 1, '4229805', 'zakho', 'bersivey', 'old bersivey'),
+(1, 'بسام', 'بطرس', 'وردة', '1993-03-07', 1, '4229805  ', 'zakho    ', 'bersivey    ', 'old bersivey    '),
 (2, 'bassam  ', 'putros  ', 'warda  ', '2020-03-31', 1, '4229805', 'zaxo  ', 'birsivey', 'old bersivey  '),
-(6, 'aaa', 'bb', 'ccc', '1992-12-31', 1, '58577  ', 'dffd  ', 'df  ', 'df  ');
+(16, 'karwan', 'izaddin', 'abas', '2000-02-02', 0, '4229805', 'rge', 're', 'gre'),
+(17, 'karwan', 'fthf', 'fhfg', '2000-11-01', 1, '498498', 'drgg', 'fgd', 'fgd'),
+(24, 'walid', 'butros', 'warda', '1970-12-04', 1, '789456123', 'zakho', 'bersivey', 'old bersivey'),
+(25, 'nadir', 'butros', 'warda', '1982-06-20', 1, '741852963', 'zakho', 'bersivey', 'old bersivey'),
+(26, 'bbopoppopop', 'ccc  ', 'ddd  ', '2001-01-11', 0, '74152963  ', 'zakho  ', 'aabasia  ', 'sh  '),
+(29, 'bb', 'ccc', 'cc', '1990-01-02', 1, '74152963', 'zakho', 'aabasia', 'sh'),
+(30, 'terij', 'haje', 'hamid', '1993-01-05', 1, '07505656565', 'zakho', 'aabasia', 'sh');
 
 -- --------------------------------------------------------
 
@@ -176,8 +131,11 @@ CREATE TABLE `person_vaccination` (
 --
 
 INSERT INTO `person_vaccination` (`p_id`, `pv_nationality`, `pv_m_f_name`, `pv_m_m_name`, `pv_m_l_name`, `pv_today_date`, `pv_user_id`, `pv_direct_id`) VALUES
-(1, 'iraq', 'katrina', 'polos', 'butros', '2020-04-09 15:49:59', 1, 1),
-(6, 'عراقي  ', 'sd  ', 'sd  ', 'sd  ', '2020-12-28 11:29:40', 1, 1);
+(1, 'iraq  ', 'katrina  ', 'polos  ', 'butros  ', '2021-03-03 12:00:34', 1, 3),
+(16, 'عراقي', 'cs', 'cs', 'cs', '2020-12-29 22:46:34', 1, 1),
+(26, 'عراقي  ', 'eee  ', 'aaa  ', 'sss  ', '2021-02-06 14:41:20', 1, 1),
+(29, 'عراقي', 'eee', 'aaa', 'sd', '2021-02-06 14:46:52', 1, 1),
+(30, 'iraq', 'eee', 'dvs', 'sdv', '2021-02-06 14:52:05', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -196,7 +154,9 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`role_id`, `role_title`, `role_description`) VALUES
-(1, 'admin', 'saasfwfsdf');
+(1, 'admin', 'the admin have all roles'),
+(2, 'employ', 'the employ that work in sector vaccin'),
+(3, 'sector head', 'the boss of sector direction');
 
 -- --------------------------------------------------------
 
@@ -219,7 +179,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`p_id`, `u_name`, `u_password`, `u_email`, `u_role_id`, `u_id`, `u_director_id`) VALUES
-(1, 'bassam', '123', 'abc', 1, 1, 1);
+(1, 'bassam  ', '123  ', 'abc@gmail.com', 1, 1, 3),
+(17, 'ac', '123', 'karwan@gmail.com', 2, 0, 1),
+(24, 'walid', '456', 'walid@gmail.com', 3, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -240,7 +202,10 @@ CREATE TABLE `vaccination` (
 --
 
 INSERT INTO `vaccination` (`v_id`, `v_right_age`, `v_vaccination_name`, `v_dosing`, `v_user_id`) VALUES
-(1, 2, 'virus B', 1, 1);
+(1, 2, 'virus B', 1, 1),
+(116, 6, 'v1', 2, 1),
+(117, 4, 'covid19      ', 3, 17),
+(118, 3, 'sork', 3, 1);
 
 -- --------------------------------------------------------
 
@@ -265,7 +230,19 @@ CREATE TABLE `work_record` (
 --
 
 INSERT INTO `work_record` (`w_id`, `w_date`, `w_next_date`, `w_note`, `w_pollinator_name`, `w_pv_id`, `w_user_id`, `w_dir_id`, `w_v_id`) VALUES
-(6, '2020-04-09 15:53:17', '2020-04-23', 'fsddf  ', 'warda', 1, 1, 1, 1);
+(6, '2020-04-09 15:53:17', '2021-01-01', 'fsddf        ', 'warda  ', 1, 1, 1, 1),
+(7, '2020-12-29 19:45:20', '2021-01-02', 'wefwef  ', 'weffw  ', 1, 1, 1, 116),
+(9, '2021-02-02 00:23:11', '2021-02-24', '', 'basam', 1, 1, 1, 1),
+(10, '2021-02-06 13:19:47', '2021-04-02', '', 'ali', 16, 1, 1, 117),
+(12, '2021-02-06 15:05:47', '2021-02-26', '', 'basam', 30, 1, 1, 117),
+(13, '2021-02-06 15:14:19', '2021-02-18', '  ', 'basam  ', 30, 1, 3, 116),
+(14, '2021-02-24 21:37:43', '2021-02-27', '', 'bebe', 1, 1, 3, 117),
+(15, '2021-02-25 11:16:41', '2021-02-27', '', 'sdds', 16, 1, 3, 117),
+(16, '2021-02-25 13:42:28', '2021-03-06', 'adsc  ', 'sdfghj  ', 16, 1, 3, 1),
+(17, '2021-02-28 20:19:09', '2021-04-02', '', 'bassam', 1, 1, 3, 1),
+(18, '2021-03-01 12:44:41', '2021-03-09', '    ', 'ddd    ', 1, 1, 3, 116),
+(20, '2021-05-03 15:30:26', '2021-10-05', 'fgh', 'bassam', 1, 1, 3, 1),
+(21, '2021-05-09 00:59:35', '2021-05-25', 'note', 'bassam', 1, 1, 3, 1);
 
 --
 -- Indexes for dumped tables
@@ -288,20 +265,6 @@ ALTER TABLE `directoration`
 --
 ALTER TABLE `dosing`
   ADD KEY `dosing_vaccination` (`d_v_id`);
-
---
--- Indexes for table `link_roles_menus`
---
-ALTER TABLE `link_roles_menus`
-  ADD PRIMARY KEY (`m_id`),
-  ADD KEY `role_link_role` (`m_role_id`),
-  ADD KEY `role_menus` (`m_meue_id`);
-
---
--- Indexes for table `menus`
---
-ALTER TABLE `menus`
-  ADD PRIMARY KEY (`m_id`);
 
 --
 -- Indexes for table `person`
@@ -356,49 +319,37 @@ ALTER TABLE `work_record`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `con_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `con_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `directoration`
 --
 ALTER TABLE `directoration`
-  MODIFY `dir_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `link_roles_menus`
---
-ALTER TABLE `link_roles_menus`
-  MODIFY `m_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `menus`
---
-ALTER TABLE `menus`
-  MODIFY `m_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `dir_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `person`
 --
 ALTER TABLE `person`
-  MODIFY `p_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `p_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `vaccination`
 --
 ALTER TABLE `vaccination`
-  MODIFY `v_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+  MODIFY `v_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
 
 --
 -- AUTO_INCREMENT for table `work_record`
 --
 ALTER TABLE `work_record`
-  MODIFY `w_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `w_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Constraints for dumped tables
@@ -409,13 +360,6 @@ ALTER TABLE `work_record`
 --
 ALTER TABLE `dosing`
   ADD CONSTRAINT `dosing_vaccination` FOREIGN KEY (`d_v_id`) REFERENCES `vaccination` (`v_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `link_roles_menus`
---
-ALTER TABLE `link_roles_menus`
-  ADD CONSTRAINT `role_link_role` FOREIGN KEY (`m_role_id`) REFERENCES `roles` (`role_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `role_menus` FOREIGN KEY (`m_meue_id`) REFERENCES `menus` (`m_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `person_vaccination`
