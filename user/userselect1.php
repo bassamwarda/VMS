@@ -49,7 +49,7 @@
 
 echo ' <script>   //this script is for set the selected row in input
     function setrowininput1()
-    {
+    { 
         var tb=document.getElementById("tb2");
         for(var i=1; i < tb.rows.length; i++)
         {

@@ -24,7 +24,7 @@
             <link rel="stylesheet" href="assets/css/login.css">
             <style>
                 .btn-circle.btn-xl {
-                    /* width: 75px; */
+                    width: 75px;
                     height: 50px;
                     padding: 10px 16px;
                     border-radius: 15px;
@@ -85,7 +85,7 @@
 
                                                     <!-- =============================================================== -->
                                                     <?php
-                                                            if(isset(  $_SESSION["u_name"]))
+                                                            if(isset($_SESSION["u_name"]))
                                                             {
                                                             if ($_SESSION['u_role_id']==1) {
                                                                 echo '
@@ -153,7 +153,6 @@
                                                     <li id="licontact"><a class="fs-5" href="contact.php">الأتصال بنا</a></li>
                                                     <li id="liabout"><a class="fs-5" href="about.php">حول</a></li>
                                                     <li>
-
                                                         <?php 
                                                             if(isset(  $_SESSION["u_name"]))
                                                             {
@@ -166,7 +165,6 @@
                                                                         <button type="button" class="btn btn-primary fs-5">
                                                                             <span class="badge bg-secondary">'.$_SESSION["message"].'</span> الرسائل
                                                                         </button>
-                                                                        
                                                                     </a>
                                                                 </li>
                                                                     <li><p class="container"><i>'.$_SESSION["u_name"].'عزيزي المشترك </i><br> هل تريد تسجيل الخروج ?</p></li>
@@ -182,7 +180,6 @@
                                                                echo" <button type='button' onclick="." document.getElementById('id01').style.display='block'"." class='btn btn-secondary  fs-5'>";
                                                                echo "دخول</button>";
                                                             }
-                                                            
                                                         ?>
                                                         <div class="row">
                                                             <div class="col-sm-12 col-md-12 col-lg-12">

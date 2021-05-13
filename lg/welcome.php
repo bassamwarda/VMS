@@ -36,10 +36,6 @@ if (isset ($uname) and isset ($u_password ))
                 { 
                     $_SESSION["message"]= 0;
                 }
-
-
-
-
                 echo "<h1>Welcome ".$_SESSION['u_name']."</h1>";
                 echo "<br><a href='logout.php'><input type=button value=logout name=logout></a>";
                 header('Location:../home.php');
