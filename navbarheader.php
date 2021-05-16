@@ -22,6 +22,7 @@
             <link rel="stylesheet" href="assets/css/nice-select.css">
             <link rel="stylesheet" href="assets/css/style.css">
             <link rel="stylesheet" href="assets/css/login.css">
+
             <style>
                 .btn-circle.btn-xl {
                     width: 75px;
@@ -41,7 +42,8 @@
                     font-size: 12px;
                     line-height: 1.42857;
                 }
-            </style>
+                
+                </style>
    </head>
    <body  dir="rtl">
     <!-- Preloader Start -->
