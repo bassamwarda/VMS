@@ -76,7 +76,7 @@ li.timeline-item::before {
 <!--====================================================================================-->
 <div class='row'>
       <div class="col-md-12">
-        <div class="alert alert-info lead text-right" role="alert">
+        <div class="alert alert-secondary lead text-right" role="alert">
           <!-- فكرة هذا الموقع هو تسهيل عمل قطاع الصحي في تسجيل  جميع عمليات التلقيح  و هذا يوفر الوقت 
           والجهد والتوفير المصاريف من حيث الورق واعمال توصيل الاوراق والسجلات الى الجهات المعنية 
           ويقلل كثيراً من عمل الموظفين لانهم سوف يدخلون المعلومات مرة واحدة فقط و بعد ذالك سوف 
@@ -105,7 +105,7 @@ li.timeline-item::before {
                             <br>
                         </p>
                            <p>
-                               وقام بالاشراف الاستاذ : <span class="fs-5  #999" style="color:black;">يوسف گرابیت ئارشاك</span> 
+                               وقام بالاشراف الاستاذ : <span class="fs-5  #999" style="color:black;">يوسف گربیت ارشاك</span> 
                             </p>
                          
                     </li>
